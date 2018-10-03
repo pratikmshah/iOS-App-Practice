@@ -27,6 +27,11 @@ class ViewController: UIViewController {
         updateMagicBallImage()
     }
     
+    override func motionEnded(_ motion: UIEvent.EventSubtype,
+                     with event: UIEvent?) {
+        updateMagicBallImage()
+    }
+    
     func updateMagicBallImage() {
         randomBallNumber = Int.random(in: 0 ... 4)
         magicBallImage.image = UIImage(named: ballArray[randomBallNumber])
